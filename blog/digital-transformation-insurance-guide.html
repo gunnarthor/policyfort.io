@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Transformation in Insurance: A Complete Guide | PolicyFort</title>
+    <meta name="description" content="Everything you need to know about successfully implementing digital transformation initiatives in your brokerage.">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            color: #1a1a1a;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e5e5;
+            backdrop-filter: blur(20px);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-family: 'SF Mono', 'Monaco', monospace;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-image {
+            height: 32px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1a1a1a;
+        }
+
+        .cta-button {
+            background: #1a1a1a;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            background: #333;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            padding: 140px 0 100px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .post-hero {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 56px 0;
+            color: #fff;
+            margin-bottom: 3rem;
+            border-radius: 8px;
+        }
+
+        .post-hero .container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            max-width: 760px;
+        }
+
+        .post-emoji {
+            font-size: 40px;
+            opacity: .9;
+        }
+
+        .post-title {
+            margin: 0;
+            font-size: 32px;
+            line-height: 1.2;
+        }
+
+        .post-meta {
+            margin-top: 6px;
+            color: rgba(255,255,255,.9);
+            font-size: 14px;
+        }
+
+        .post-content {
+            padding: 0;
+        }
+
+        .post-content p {
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-content h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .post-content ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-content li {
+            margin: 0.5rem 0;
+            color: #333;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f8f9fa;
+            color: #666;
+            padding: 3rem 0 1rem;
+            border-top: 1px solid #e5e5e5;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .footer-section a {
+            color: #666;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: #1a1a1a;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            font-family: 'SF Mono', 'Monaco', monospace;
+        }
+
+        .footer-logo .logo-image {
+            height: 24px;
+            width: auto;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+            font-size: 0.9rem;
+        }
+
+        .contact-email {
+            color: #059669 !important;
+            font-weight: 500;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-email:hover {
+            color: #047857 !important;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #e5e5e5;
+            padding-top: 1rem;
+            text-align: center;
+            color: #999;
+            font-size: 0.8rem;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links.mobile-open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem 0;
+                border-top: 1px solid #e5e5e5;
+                gap: 0;
+            }
+
+            .nav-links.mobile-open li {
+                padding: 0.75rem 2rem;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            .nav-links.mobile-open li:last-child {
+                border-bottom: none;
+            }
+
+            .blog-content {
+                padding: 120px 0 80px;
+            }
+
+            .post-hero .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .post-title {
+                font-size: 24px;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">
+                <img src="../logo.png" alt="PolicyFort Logo" class="logo-image">
+                PolicyFort
+            </a>
+            <ul class="nav-links">
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#products">Products</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/#about">Team</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <a href="/#booking" class="cta-button">Book Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="blog-content">
+        <div class="container">
+            <section class="post-hero">
+                <div class="container">
+                    <div class="post-emoji">🚀</div>
+                    <div>
+                        <h1 class="post-title">Digital Transformation in Insurance: A Complete Guide</h1>
+                        <div class="post-meta">January 5, 2025 · 5 min read</div>
+                    </div>
+                </div>
+            </section>
+
+            <article class="post-content">
+                <p>Digital transformation isn't just about technology—it's about fundamentally changing how your brokerage operates to better serve clients and stay competitive. Here's your roadmap to success.</p>
+
+                <h2>What is digital transformation?</h2>
+                <p>Digital transformation means using technology to create new business models, improve customer experiences, and streamline operations. For insurance brokers, this often starts with automating manual processes and ends with completely reimagining how you interact with clients.</p>
+
+                <h2>Why it matters now</h2>
+                <p>Clients expect digital experiences. They want to submit documents online, get instant quotes, and manage policies through self-service portals. Brokers who don't adapt risk losing business to competitors who do.</p>
+
+                <h2>Key areas to focus on</h2>
+                <ul>
+                    <li><strong>Client onboarding:</strong> Digital submission forms, document uploads, and automated validation</li>
+                    <li><strong>Quote generation:</strong> AI-powered rating engines and instant pricing</li>
+                    <li><strong>Policy management:</strong> Self-service portals for clients and brokers</li>
+                    <li><strong>Claims processing:</strong> Automated workflows and real-time updates</li>
+                    <li><strong>Data analytics:</strong> Insights to improve underwriting and client relationships</li>
+                </ul>
+
+                <h2>Getting started</h2>
+                <p>Start small. Pick one process that's causing pain and automate it. Measure the results, then expand to other areas. Focus on quick wins that demonstrate value to your team and clients.</p>
+
+                <p>Remember: digital transformation is a journey, not a destination. The goal is continuous improvement, not perfection from day one.</p>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../logo.png" alt="PolicyFort Logo" class="logo-image">
+                        <span>PolicyFort</span>
+                    </div>
+                    <p>AI-powered software solutions for insurance brokers. Transform your brokerage with cutting-edge technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services & Products</h4>
+                    <a href="/#services">Custom Development</a>
+                    <a href="/#services">AI Integration</a>
+                    <a href="/#services">GDPR Compliance</a>
+                    <a href="/#products">Rating Guide Editor</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="/#about">Our Team</a>
+                    <a href="/blog/">Blog & Insights</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Get in touch</h4>
+                    <a href="mailto:hello@policyfort.io" class="contact-email">hello@policyfort.io</a>
+                    <h4 style="margin-top: 2rem;">Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PolicyFort.io. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = '#ffffff';
+                header.style.backdropFilter = 'blur(20px)';
+            }
+        });
+
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('mobile-open');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('mobile-open');
+            });
+        });
+    </script>
+</body>
+</html> 
